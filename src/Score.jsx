@@ -1,11 +1,9 @@
 const Score = (props) => {
   return (
-    <>
-    <h2>Student Scores</h2>
-    <h2>Date: {props.scores.score}</h2>
-    <h3>Score: {props.scores.date}</h3>
-    </>
+    <div>
+      {props.studentName} score: {props.score.score} on: {props.score.date}.
+    </div>
   )
 }
 
-export default Score
+export default Score;

@@ -1,14 +1,21 @@
-import Score from "./Score"
+import Score from "./Score";
 
 const Student = (props) => {
-  return ( 
-    <>
-    <h2>Students component</h2>
-    <h2>{props.students.name}</h2>
-    <h3>{props.students.bio}</h3>
-    <Score/>
-    </>
-  );
+  return (
+    <div>
+    <h2>
+      {props.student.name}
+    </h2>
+    <h3>
+      {props.student.bio}
+    </h3>
+    <h4>
+    {props.student.scores.map((score, idx) =>
+    <Score score={ score } studentName={ props.student.name } key={idx}/>
+    )}
+    </h4>
+    </div>
+  )
 }
 
 export default Student;

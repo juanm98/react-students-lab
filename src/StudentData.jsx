@@ -1,14 +1,13 @@
-import Student from "./Student"
+import Student from "./Student";
 
 const StudentData = (props) => {
   return (
-    <>
-    <h2>Student list</h2>
-    {props.students.map(student =>
-      <Student key={student.name} student={student} />
-      )}
-    </>
+    <div>
+    {props.students.map((student, idx) =>
+    <Student student={student} key={idx}/>
+    )}
+  </div>
   )
 }
 
-export default StudentData
+export default StudentData;
